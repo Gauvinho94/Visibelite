@@ -5,27 +5,154 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Visibélite – SEO Local pour PME</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header, section, footer { padding: 2rem; max-width: 960px; margin: auto; }
-    .hero { background: #f0f4f8; text-align: center; padding: 4rem 2rem; }
-    .hero h1 { font-size: 2.5rem; color: #1e3a8a; }
-    .hero p { font-size: 1.2rem; margin-top: 1rem; }
-    .btn { background: #1e3a8a; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 1rem; }
-    .benefits, .offers, .testimonials, .faq, .contact { margin-top: 4rem; }
-    .offer, .testimonial, .faq-item { border: 1px solid #ccc; border-radius: 6px; padding: 1rem; margin: 1rem 0; }
-    form input, form textarea { width: 100%; padding: 0.5rem; margin: 0.5rem 0; }
-    form button { background: #1e3a8a; color: white; padding: 1rem; border: none; cursor: pointer; border-radius: 5px; }
+    :root {
+      --green: #14532d;
+      --black: #000;
+      --white: #fff;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: var(--black);
+      background-color: var(--white);
+    }
+
+    header, section, footer {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    nav {
+      background: var(--black);
+      color: var(--white);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: #e6f4ea;
+      text-align: center;
+      padding: 6rem 2rem 4rem;
+    }
+
+    .hero img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--green);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      background: var(--green);
+      color: var(--white);
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .benefits, .offers, .testimonials, .faq, .contact {
+      margin-top: 4rem;
+    }
+
+    .offer {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      background: #f7f7f7;
+    }
+
+    .offer h3 {
+      color: var(--green);
+    }
+
+    .testimonial, .faq-item {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 1rem;
+      margin: 1rem 0;
+      background: #f9f9f9;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+    }
+
+    form button {
+      background: var(--green);
+      color: white;
+      padding: 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      background: #f1f1f1;
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+
+    /* For menu offset scrolling */
+    html {
+      scroll-padding-top: 70px;
+    }
   </style>
 </head>
 <body>
 
+  <nav>
+    <ul>
+      <li><a href="#benefits">Pourquoi le SEO</a></li>
+      <li><a href="#offers">Nos offres</a></li>
+      <li><a href="#testimonials">Témoignages</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <header class="hero">
+    <img src="logo-visibelite.png" alt="Logo Visibélite">
     <h1>Votre entreprise mérite d’être visible sur Google</h1>
     <p>Le SEO simple, humain et local pour booster votre visibilité</p>
     <a href="#contact" class="btn">Demandez un audit gratuit</a>
   </header>
 
-  <section class="benefits">
+  <section id="benefits" class="benefits">
     <h2>Pourquoi le SEO ?</h2>
     <p>Le référencement naturel permet à vos clients de vous trouver facilement sur Google, sans publicité. C’est une solution durable pour attirer plus de visiteurs, augmenter votre notoriété locale, et gagner de nouveaux clients.</p>
     <ul>
@@ -35,7 +162,7 @@
     </ul>
   </section>
 
-  <section class="offers">
+  <section id="offers" class="offers">
     <h2>Nos offres</h2>
     <div class="offer">
       <h3>Starter – 339 €/mois</h3>
@@ -54,7 +181,7 @@
     </div>
   </section>
 
-  <section class="testimonials">
+  <section id="testimonials" class="testimonials">
     <h2>Ils nous font confiance</h2>
     <div class="testimonial">
       <p>“Grâce à Visibélite, j’apparais en première page de Google dans ma ville. Les résultats ont été rapides et concrets.”<br><strong>— Julie, coiffeuse à Lyon</strong></p>
@@ -67,7 +194,7 @@
     </div>
   </section>
 
-  <section class="faq">
+  <section id="faq" class="faq">
     <h2>FAQ – Questions fréquentes</h2>
     <div class="faq-item">
       <strong>Combien de temps faut-il pour voir des résultats ?</strong>
